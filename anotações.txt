@@ -17,4 +17,15 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
 - o jquery tem um evento nativo que dispara quando o documento está pronto 
 
 
-3-seletores
+3-seletores 
+
+-os principais seletores do jquery(seleciona o item dentro do HTML)
+
+    seletor pegando pelo tipo de html
+        $('p').html("Inserido com jquery"); 
+
+    seletor pegando por tipo de html assimilando a class
+        $('p.p-yellow').html("Inserido com jquery pegaqndo por classe do p"); 
+
+    seletor pegando por id
+        $('#teste').html("Inserido com jquery por id"); 17:55

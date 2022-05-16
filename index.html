@@ -11,7 +11,15 @@
 
 <body>
 
-    <p id="teste"></p>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolorum officia molestias, incidunt
+        ipsa, cumque necessitatibus ratione ipsum eaque qui laborum quidem laboriosam id pariatur! Deleniti facilis sunt
+        aperiam assumenda!</p>
+
+    <p id="teste">Isso é um parágrafo de teste</p>
+
+    <p class="p-yellow">Outro parágrafo</p>
 
     <!-- 1 -->
     <script src="./jquery-3.6.0.js "></script>
@@ -20,10 +28,19 @@
         /* 2 */
         $(document).ready(function () {
 
-            
+            /* 3 */
+            $('p').html("Inserido com jquery");
+
+            /* 3 */
+            $('#teste').html("Inserido com jquery pegando por id");
+
+            /* 3 */
+            $('p.p-yellow').html("Inserido com jquery pegaqndo por classe do p");
+
+
 
             /* 2   */
-            $("#teste").html("teste").css("color", "red");
+            $("#testeAula2").html("teste").css("color", "red");
 
         });
     </script>
