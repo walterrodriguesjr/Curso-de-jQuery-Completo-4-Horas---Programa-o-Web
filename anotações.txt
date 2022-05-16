@@ -1,0 +1,20 @@
+https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s 
+
+1-introdução ao jquery
+
+-baixada e instala a versão descomprimida do jquery 
+    https://code.jquery.com/jquery-3.6.0.js 
+
+-criado o index.html 
+
+
+2-sintaxe do jquery 
+
+-é padrão do jquery, sempre usar o cifrão em inicio ($)
+    ex:pega pelo id, em seguida o .html insere um texto neste 'p', em seguida,
+    o .css insere a cor vermelha no texto deste 'p' com id '#teste';
+
+- o jquery tem um evento nativo que dispara quando o documento está pronto 
+
+
+3-seletores
