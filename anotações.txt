@@ -29,3 +29,23 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
 
     seletor pegando por id
         $('#teste').html("Inserido com jquery por id"); 17:55
+
+
+4-eventos 
+    são disparados para interação do usuário com a página 
+        exemplo do evento de botão de click, feito o alert do button e tambem o usando o this, que 
+            aquele que é clicado é alterado pelo método html e o que ele diz, e também, o método hide. 
+        exemplo de evento de mouse (ou hover)
+            ações de passar em cima e sair de cima com o mouse. sempre lembrar de usar o this. 
+            também pode ser usado o método .hover
+        exemplo de uso do método .focus(clica em cima de input e muda a cor, no exemplo) e .blur(clica fora)
+        é possível disparar eventos usando o .on, que em seguida nele, passa o tipo de evento (click, focus etc)
+            o método .on, tem a vantagem de poder acionar multiplos exemplos do mesmo tipo em uma vez só 
+        
+
+5-efeitos e animações 
+    
+
+    
+    
+

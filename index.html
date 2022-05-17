@@ -21,6 +21,12 @@
 
     <p class="p-yellow">Outro parágrafo</p>
 
+    <!-- 4 -->
+    <button id="botao" style="padding: 10px">Clique aqui</button>
+
+    <!-- 4 -->
+    <input type="text" id="input" placeholder="Digite aqui:">
+
     <!-- 1 -->
     <script src="./jquery-3.6.0.js "></script>
 
@@ -38,10 +44,52 @@
             $('p.p-yellow').html("Inserido com jquery pegaqndo por classe do p");
 
 
-
             /* 2   */
             $("#testeAula2").html("teste").css("color", "red");
 
+
+            /* 4 */
+            $("#botao").click(function (e) {
+                e.preventDefault();
+                alert("Clicou no botão");
+            });
+            /* 4 */
+            $("#teste").click(function (e) {
+                e.preventDefault();
+                $(this).html("Mudei quando fui clicado");
+            });
+            /* 4 */
+            $(".p-yellow").click(function (e) {
+                e.preventDefault();
+                $(this).hide();
+            });
+            /* 4 */
+            $("#teste").mouseenter(function () {
+                $(this).html("Mouse passou em cima");
+            });
+            /* 4 */
+            $("#teste").mouseleave(function () {
+                $(this).html("Mouse saiu de cima");
+            });
+            /* 4 */
+            $(".p-yellow").hover(function () {
+                    $(this).html("hover passando em cima")
+                    
+                }, function () {
+                    $(this).html("hover saindo de cima");
+                }
+                /* 4 */
+            );
+            /* 4 */
+            $("#input").focus(function (e) { 
+                e.preventDefault();
+                $(this).css("background", "yellow");
+            });
+            /* 4 */
+            $("#input").blur(function (e) { 
+                e.preventDefault();
+                $(this).css("background", "grey");
+            });
         });
     </script>
 </body>
