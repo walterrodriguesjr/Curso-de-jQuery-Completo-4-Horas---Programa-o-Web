@@ -37,6 +37,7 @@
         .green {
             background: green;
         }
+
         .black {
             background: black;
         }
@@ -75,6 +76,15 @@
 
     <button id="botaoToogle">Alternar</button>
 
+    <hr>
+    <hr>
+
+    <h1>O jQuery pode manipular o DOM</h1>
+    <h2>DOM=Document Object Model</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, commodi quaerat! Excepturi rem non earum atque
+        ea in quia, doloremque consectetur, vitae aperiam id ratione, iure porro saepe veritatis a.</p>
+
+    <input type="text" id="texto" placeholder="digite algo:">
     <!-- 1 -->
     <script src="./jquery-3.6.0.js "></script>
 
@@ -150,11 +160,21 @@
                 });
             });
             /* 5 */
-            $("#botaoToogle").click(function (e) { 
+            $("#botaoToogle").click(function (e) {
                 e.preventDefault();
-                $(".black").toggle(2000, function() {
+                $(".black").toggle(2000, function () {
                     alert("Alternado com sucesso!");
                 });
+            });
+
+            /* 6 */
+            var textoH1 = $("h1").html();
+            alert(textoH1);
+
+            $("#texto").blur(function (e) { 
+                e.preventDefault();
+                var valor = $(this).val();
+                alert('Foi digitado: ' + valor);
             });
         });
 

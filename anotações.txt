@@ -52,6 +52,13 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
         exemplos usando o método toogle, que evita sempre ter que fazer hide e show, já que o toogle é um 
             método de alternância 
         exemplos substituindo o show e hide por fadeIn e fadeOut (a animação é diferente)
-        
+
+
+6-manipular o DOM 
+    alterar dinamicamente a estrutura da arvore do HTML e CSS. (inserir dados na tela que até então
+        nem existem)
+    exemplos utilizando variaveis que capturam o conteudo de um nó e o inserem dinamicamente em algo
+    
+
     
 
