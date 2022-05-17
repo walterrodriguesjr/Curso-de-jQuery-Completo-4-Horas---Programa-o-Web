@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisições Ajax</title>
+</head>
+
+<body>
+
+    <h1>Conhecendo o Ajax</h1>
+    <div id="teste">
+        <p>Um conteúdo inicial</p>
+    </div>
+
+    <br>
+
+    <button id="botao">Clique aqui para carregar conteúdo externo</button>
+
+    <hr>
+
+    <input type="text" id="cep" placeholder="Digite o seu CEP:">
+    <br>
+    <br>
+    <input type="text" id="cidade" placeholder="Cidade">
+    <br>
+    <br>
+    <input type="text" id="uf" placeholder="UF">
+
+    <script src="./jquery-3.6.0.js "></script>
+
+    <script>
+        /* 7 */
+        $(document).ready(function () {
+            $("#botao").click(function (e) {
+                e.preventDefault();
+
+                $("#teste").load("teste.txt");
+            });
+
+            /* 7 */
+            $("h1").mouseover(function () {
+                $("#teste").load("teste.txt");
+            });
+
+            $("#cep").blur(function (e) {
+                e.preventDefault();
+                var valor = $(this).val();
+
+                /* 7 */
+                /* $.get("https://viacep.com.br/ws/" + valor + "/json/", function (dados, status) {
+                    console.log(status);
+                    if (status == "success") {
+                        $("#cidade").val(dados.localidade);
+                        $("#uf").val(dados.uf);
+                    } else {
+                        alert("dados incorretos!");
+                    };
+                }); */
+
+                /* 7 */
+                $.ajax({
+                    type: "get",
+                    url: "https://viacep.com.br/ws/" + valor + "/json/",
+                    success: function (dados, status) {
+                        $("#cidade").val(dados.localidade);
+                        $("#uf").val(dados.uf); 
+                        alert("Ação realizada com sucesso!")
+                    },
+                    error: function() {
+                       alert("Erro ao solicitar os dados"); 
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

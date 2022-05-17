@@ -1,0 +1,5 @@
+<h2>Ajax é legal!</h2>
+<p>Este conteúdo foi puxado de um arquivo externo</p>
+<script>
+    alert("alerta carregado de fora");
+</script>

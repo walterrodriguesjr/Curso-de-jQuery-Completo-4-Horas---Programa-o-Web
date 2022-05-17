@@ -58,7 +58,20 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
     alterar dinamicamente a estrutura da arvore do HTML e CSS. (inserir dados na tela que até então
         nem existem)
     exemplos utilizando variaveis que capturam o conteudo de um nó e o inserem dinamicamente em algo
+
+
+7-requisiões Ajax 
+    serve para fazer requisições assíncronas (carregar dados em segundo plano, sem fazer refresh) 
+        usando método load do ajax
+            feito teste puxando dados de um arquivo externo do index (teste.txt)
+             pode trazer todo tipo de dado, textos, imagens, scripts. Podem também acessar URL que permitam acesso 
+        usando o método get do ajax 
+
+
+8-método no conflict 
     
+
+        
 
     
 
