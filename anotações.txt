@@ -68,9 +68,14 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
         usando o método get do ajax 
 
 
-8-método no conflict 
+8-método noConflict()
    para que não haja conflito entre bibliotecas, por motivo de sintaxe, o cifrão do jquery por exemplo 
     existe o método .noConflict() 
+
+
+9-método filter()
+    feito a lógica de filter de tabela, conforme digita no input, o filter vai executando e trazer 
+    somente a linha da tabela que corresponder ao que for digitado.
 
         
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        td,
+        th {
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 8px;
+        }
+
+        input {
+            margin-left: 10%;
+            margin-bottom: 1%;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="busca" placeholder="Digite para buscar">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+        <tbody id="MinhaTabela">
+            <tr>
+                <td>walter</td>
+                <td>rodrigues</td>
+                <td>walter@gmail.com</td>
+            </tr>
+            <tr>
+                <td>charlene</td>
+                <td>inaba</td>
+                <td>cha@gmail.com</td>
+            </tr>
+            <tr>
+                <td>renan</td>
+                <td>lima</td>
+                <td>renan@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="./jquery-3.6.0.js "></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#busca").on('keyup', function () {
+               var valor = $(this).val().toLowerCase();
+
+               $("#MinhaTabela tr").filter(function(){
+                   $(this).toggle($(this).text().toLocaleLowerCase().indexOf(valor) > -1);
+               }) 
+            });
+        });
+    </script>
+</body>
+
+</html>
