@@ -32,6 +32,7 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
 
 
 4-eventos 
+
     são disparados para interação do usuário com a página 
         exemplo do evento de botão de click, feito o alert do button e tambem o usando o this, que 
             aquele que é clicado é alterado pelo método html e o que ele diz, e também, o método hide. 
@@ -44,8 +45,13 @@ https://www.youtube.com/watch?v=MIogKzdxDYU&t=543s
         
 
 5-efeitos e animações 
-    
 
-    
+    efeitos visuais, afetam a parte estética do html 
+        usando métodos hide e show, usando parametros de temporizador, por exemplo
+            exemplos utilizando callback (no caso do temmporizador, executa algo apos o hide ou o show)
+        exemplos usando o método toogle, que evita sempre ter que fazer hide e show, já que o toogle é um 
+            método de alternância 
+        exemplos substituindo o show e hide por fadeIn e fadeOut (a animação é diferente)
+        
     
 

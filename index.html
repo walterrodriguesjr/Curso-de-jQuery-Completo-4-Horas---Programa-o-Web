@@ -7,11 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aulas de jQuery</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .d-inline {
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+        }
+
+        button {
+            padding: 40px;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .green {
+            background: green;
+        }
+        .black {
+            background: black;
+        }
+    </style>
 </head>
 
 <body>
-
-
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolorum officia molestias, incidunt
         ipsa, cumque necessitatibus ratione ipsum eaque qui laborum quidem laboriosam id pariatur! Deleniti facilis sunt
@@ -26,6 +58,22 @@
 
     <!-- 4 -->
     <input type="text" id="input" placeholder="Digite aqui:">
+
+    <hr>
+    <hr>
+
+    <!-- 5 -->
+    <div class="d-inline red"></div>
+    <div class="d-inline blue"></div>
+    <div class="d-inline green"></div>
+    <div class="d-inline black"></div>
+
+    <hr>
+    <!-- 5 -->
+    <button id="botaoHide">Ocultar</button>
+    <button id="botaoShow">Mostrar</button>
+
+    <button id="botaoToogle">Alternar</button>
 
     <!-- 1 -->
     <script src="./jquery-3.6.0.js "></script>
@@ -43,10 +91,8 @@
             /* 3 */
             $('p.p-yellow').html("Inserido com jquery pegaqndo por classe do p");
 
-
             /* 2   */
             $("#testeAula2").html("teste").css("color", "red");
-
 
             /* 4 */
             $("#botao").click(function (e) {
@@ -73,24 +119,45 @@
             });
             /* 4 */
             $(".p-yellow").hover(function () {
-                    $(this).html("hover passando em cima")
-                    
-                }, function () {
-                    $(this).html("hover saindo de cima");
-                }
-                /* 4 */
-            );
+                $(this).html("hover passando em cima")
+
+            }, function () {
+                $(this).html("hover saindo de cima");
+            });
             /* 4 */
-            $("#input").focus(function (e) { 
+            $("#input").focus(function (e) {
                 e.preventDefault();
                 $(this).css("background", "yellow");
             });
             /* 4 */
-            $("#input").blur(function (e) { 
+            $("#input").blur(function (e) {
                 e.preventDefault();
                 $(this).css("background", "grey");
             });
+
+            /* 5 */
+            $("#botaoHide").click(function (e) {
+                e.preventDefault();
+                $(".blue").hide(1000, function () {
+                    alert("Elemento escondido com sucesso!");
+                });
+            });
+            /* 5 */
+            $("#botaoShow").click(function (e) {
+                e.preventDefault();
+                $(".blue").show(1000, function () {
+                    alert("Elemento mostrado com sucesso!")
+                });
+            });
+            /* 5 */
+            $("#botaoToogle").click(function (e) { 
+                e.preventDefault();
+                $(".black").toggle(2000, function() {
+                    alert("Alternado com sucesso!");
+                });
+            });
         });
+
     </script>
 </body>
 
